@@ -64,7 +64,7 @@ for(let index = 0; index <sitElement.length; index++){
     //get the value input filed
     const couponElement = document.getElementById('input-filed').value;
     const couponCode = couponElement.split(" ").join("").toUpperCase();
-    console.log(couponCode);
+    grandTotal.innerText = totalPrice;
     if(couponCode === "NEW15"){
         const grandTotal = document.getElementById('grand-total');
         const discoundPrice = totalPrice * 0.15 ;
@@ -75,10 +75,25 @@ for(let index = 0; index <sitElement.length; index++){
         const grandTotal = document.getElementById('grand-total');
         const discoundPrice = totalPrice * 0.2 ;
         grandTotal.innerText = totalPrice - discoundPrice;
+        
     }
     else{
         alert("Invalid Coupon");
     }
     
 })
+
+// Input filed section
+const passenger = document.getElementById("passenger");
+passenger.addEventListener("change", function(e){
+    console.log("change", e.target.value);
+})
+
+passenger.addEventListener("input", function(e){
+    console.log("input", e.target.value)
+})
+
+
+
+
 
