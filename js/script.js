@@ -64,7 +64,6 @@ for(let index = 0; index <sitElement.length; index++){
     //get the value input filed
     const couponElement = document.getElementById('input-filed').value;
     const couponCode = couponElement.split(" ").join("").toUpperCase();
-    grandTotal.innerText = totalPrice;
     if(couponCode === "NEW15"){
         const grandTotal = document.getElementById('grand-total');
         const discoundPrice = totalPrice * 0.15 ;
