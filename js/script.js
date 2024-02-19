@@ -34,8 +34,22 @@ for(let index = 0; index <sitElement.length; index++){
     // console.log(setContainer);
 
     const h2 = document.createElement("h2");
+    h2.style.marginLeft = '20px';
     h2.innerText =  title;
     setContainer.appendChild(h2);
+
+    const classContainer = document.getElementById('class-container');
+    // console.log(classContainer);
+    const h3 = document.createElement("h3");
+    h3.style.marginLeft = '120px';
+    h3.innerText =  'Economoy ';
+    classContainer.appendChild(h3);
+
+    const priceContainer = document.getElementById('price-container');
+    const p = document.createElement("p");
+    p.style.marginLeft = '130px';
+    p.innerText = price;
+    priceContainer.appendChild(p);
 
     // Ticket Price Calculate
         totalPrice += price;
